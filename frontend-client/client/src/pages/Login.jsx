@@ -10,7 +10,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`${import.meta.env.VITE_API}/login`, {
+      const res = await fetch(`${import.meta.env.VITE_API}/api/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include", // <--- this is required
