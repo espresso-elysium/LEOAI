@@ -70,7 +70,7 @@ const Sidebar = ({ recents, onNewChat, onSelectRecent, onDeleteRecent }) => {
         <div className="bottom-item recent-entry" style={{ cursor: 'pointer' }}>
           <img src={assets.log_out} onClick={handleLogout} alt="Logout" />
           {extent?<a
-            href="http://localhost:3000/login"
+            href="/login"
             style={{ marginLeft: '8px' }}
           >
             Logout

@@ -13,7 +13,7 @@ const Leo = () => {
   const [Gname, setGname] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/userinfo", { credentials: "include" })
+    fetch(`${import.meta.env.VITE_API}/api/userinfo`, { credentials: "include" })
       .then((res) => {
         if (!res.ok) throw new Error("Unauthorized");
         return res.json();
