@@ -9,7 +9,7 @@ const authRoutes = require('./routes/authRoutes');
 const app = express();
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://leoai-nym8.onrender.com",
   credentials: true
 }));
 app.use(express.json());
