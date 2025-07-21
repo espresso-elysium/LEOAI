@@ -6,10 +6,11 @@ const PrivateRoute = () => {
   const [isAuth, setIsAuth] = useState(null);
 
   useEffect(() => {
-fetch("https://leoai-backend.onrender.com/api/userinfo", {
-  method: "GET",
-  credentials: "include"
-});.then((res) => setIsAuth(res.ok))
+    fetch("https://leoai-backend.onrender.com/api/userinfo", {
+      method: "GET",
+      credentials: "include",
+    })
+      .then((res) => setIsAuth(res.ok))
       .catch(() => setIsAuth(false));
   }, []);
 
