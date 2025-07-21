@@ -1,21 +1,24 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 import { assets } from "../../assets/assets"; // update path based on actual location
 import "../Sidebar/Sidebar.css";
 
-const handleLogout = async () => {
-  await fetch(`${import.meta.env.VITE_API}/api/logout`, {
-    method: "POST",
-    credentials: "include",
-  });
-  window.location.href = "/login"; // or use navigate("/login")
-};
 
 const Sidebar = ({ recents, onNewChat, onSelectRecent, onDeleteRecent }) => {
   const [extent, setextend] = useState(false);
+   const navigate = useNavigate();
 
   // Debug: Log recents prop
   console.log("Sidebar recents:", recents);
+
+
+   const handleLogout = async () => {
+    await fetch(`${import.meta.env.VITE_API}/api/logout`, {
+      method: "POST",
+      credentials: "include",
+    });
+    navigate("/login"); // 👈 Use navigate instead of window.location.href
+  };
 
   return (
     <div className="sidebar">
