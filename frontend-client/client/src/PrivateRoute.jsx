@@ -6,7 +6,7 @@ const PrivateRoute = () => {
   const [isAuth, setIsAuth] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/userinfo", { credentials: "include" })
+    fetch("http://localhost:5000/api/userinfo", { method:'GET',credentials: "include" })
       .then((res) => setIsAuth(res.ok))
       .catch(() => setIsAuth(false));
   }, []);
