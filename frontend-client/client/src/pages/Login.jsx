@@ -86,9 +86,11 @@ export default function Login() {
           <div className="flex-grow border-t border-gray-300"></div>
         </div>
 
-        <p className="mt-8 text-center text-gray-600">Don't have an account?
-          <a href="/" className="font-medium text-blue-600 hover:text-blue-500 transition duration-200"> Sign up</a>
-        </p>
+       
+        <p className="mt-8 text-center text-gray-600">
+  Don't have an account?
+  <Link to="/" className="font-medium text-blue-600 hover:text-blue-500 transition duration-200"> Sign up</Link>
+</p>
       </div>
     </div>
   );
