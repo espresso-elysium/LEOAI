@@ -8,6 +8,10 @@ const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 
+const allowedOrigins = [
+  "https://leoai-nym8.onrender.com"
+];
+
 app.use(cors({
   origin: "https://leoai-nym8.onrender.com",
   credentials: true
