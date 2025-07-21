@@ -1,9 +1,8 @@
 import { useState } from "react";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Main from "./components/Main/Main"; // import Main.jsx
+import Main from "./components/Main/Main";
 import Sidebar from "./components/Sidebar/Sidebar";
 // import Chatpage from './pages/Chatpage';
 import Leo from './pages/Leo';
@@ -18,13 +17,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Signup />} />
-        <Route path="/login" element={<Login />} 
-        
-
-
-        />
-        {/* <Route path="/home" element={<Chatpage />} /> */}
-        // or
+        <Route path="/login" element={<Login />} />
         <Route path="/leo" element={<PrivateRoute />}>
           <Route path="" element={<Leo />} />
         </Route>
