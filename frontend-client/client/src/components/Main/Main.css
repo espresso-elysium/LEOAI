@@ -5,8 +5,6 @@
   position: relative;
 }
 
-
-
 .nav {
   display: flex;
   align-items: center;
@@ -46,7 +44,6 @@
   max-width: 900px;
   padding: 0px 20px;
   margin: auto;
-
 }
 
 .search-box {
@@ -75,7 +72,6 @@ input {
   background: transparent;
   padding: 8px;
   font-size: 18px;
-
 }
 
 .search-box div {
@@ -93,4 +89,39 @@ input {
 
 .ques-box {
   color: black;
+}
+
+/* ✅ MOBILE RESPONSIVENESS ONLY */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 18px;
+    gap: 10px;
+  }
+
+  .greet {
+    font-size: 36px;
+    padding: 10px;
+    margin: 30px 0px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    border-radius: 20px;
+  }
+
+  .search-box div {
+    justify-content: space-between;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  .main-bottom {
+    padding-bottom: 20px;
+  }
 }
