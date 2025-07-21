@@ -26,8 +26,8 @@ exports.login = async (req, res) => {
   const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
   res.cookie('token', token, {
     httpOnly: true,
-    sameSite: 'lax', // or 'none' if using HTTPS
-    secure: false,   // true if using HTTPS
+    sameSite: 'None', // or 'none' if using HTTPS
+    secure: true,   // true if using HTTPS
   });
   res.json({ message: "Login successful", username: user.username });
 };
