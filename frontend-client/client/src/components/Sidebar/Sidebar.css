@@ -27,6 +27,7 @@
   display: block;
   margin-left: 10px;
   cursor: pointer;
+
 }
 
 .new-chat {
@@ -45,6 +46,7 @@
 .new-chat:hover {
   background-color: #e2e6eb;
 }
+
 
 .recent {
   display: flex;
@@ -71,9 +73,11 @@
   background-color: #e2e6eb;
 }
 
+
 .bottom {
   display: flex;
   flex-direction: column;
+
 }
 
 .bottom-item {
@@ -96,25 +100,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .close:hover {
   background-color: #c6c8cb;
-}
-
-/* ✅ MOBILE RESPONSIVENESS */
-@media (max-width: 768px) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    height: 100vh;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .sidebar.mobile-show {
-    transform: translateX(0);
-  }
-}
+} 
